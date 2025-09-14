@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>TestNG:  Cucumber Test Runner</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Cucumber Test Runner</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Sep 14 19:41:31 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>135 seconds (135919 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that price filters work correctly.", "Search Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at steps.SearchPageStep.all_displayed_products_should_fall_within_the_selected_price_range(SearchPageStep.java:50)
+	at ✽.All displayed products should fall within the selected price range(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:30)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1046265086", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1046265086'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.all_displayed_products_should_fall_within_the_selected_price_range(SearchPageStep.java:50)
+	at ✽.All displayed products should fall within the selected price range(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:30)
+</pre></div></td>
+<td>12</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that a product can be added to the wishlist.", "Search Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at steps.SearchPageStep.the_product_should_be_added_to_the_wishlist_successfully(SearchPageStep.java:30)
+	at ✽.The product should be added to the wishlist successfully.(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:18)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905376005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905376005'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.the_product_should_be_added_to_the_wishlist_successfully(SearchPageStep.java:30)
+	at ✽.The product should be added to the wishlist successfully.(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:18)
+</pre></div></td>
+<td>12</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify product details in the wishlist.", "Search Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at steps.SearchPageStep.verify_the_product_details_in_wishlist_page(SearchPageStep.java:55)
+	at ✽.Verify the product details in wishlist Page(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:35)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace809350665", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace809350665'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.verify_the_product_details_in_wishlist_page(SearchPageStep.java:55)
+	at ✽.Verify the product details in wishlist Page(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:35)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify product can be added to compare section.", "Search Functionality"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.128)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84f5a106dd4ec8604039070e7fdae7d0, clickElement {id=f.4A6ED30BE35393C76BD6635287F893A8.d.81097DFF3FA9B81E19DF95347F5D27C6.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\basith ali\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61661/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84f5a106dd4ec8604039070e7fdae7d0)] -&gt; css selector: a#header-icon-signup]
+Session ID: 84f5a106dd4ec8604039070e7fdae7d0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.SignupPage.clickOnSignupButton(SignupPage.java:31)
+	at steps.SignUpStep.i_click_on_the_button(SignUpStep.java:20)
+	at ✽.Click on the Sign Up button(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:7)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace839289583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace839289583'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.128)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84f5a106dd4ec8604039070e7fdae7d0, clickElement {id=f.4A6ED30BE35393C76BD6635287F893A8.d.81097DFF3FA9B81E19DF95347F5D27C6.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\basith ali\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61661/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84f5a106dd4ec8604039070e7fdae7d0)] -&gt; css selector: a#header-icon-signup]
+Session ID: 84f5a106dd4ec8604039070e7fdae7d0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.SignupPage.clickOnSignupButton(SignupPage.java:31)
+	at steps.SignUpStep.i_click_on_the_button(SignUpStep.java:20)
+	at ✽.Click on the Sign Up button(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:7)
+</pre></div></td>
+<td>34</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the product details page opens.", "Search Functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at steps.SearchPageStep.the_product_details_page_should_open_with_the_correct_product_information(SearchPageStep.java:40)
+	at ✽.The product details page should open with the correct product information(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:24)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2087366743", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2087366743'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.the_product_details_page_should_open_with_the_correct_product_information(SearchPageStep.java:40)
+	at ✽.The product details page should open with the correct product information(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:24)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the functionality of footer links.", "Footer functionality"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can sign up successfully", "User Signup"</td>
+<td></td>
+<td>10</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can LOG OUT successfully", "User Signup"</td>
+<td></td>
+<td>11</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that the homepage loads successfully.", "Verify Homepage Load"</td>
+<td></td>
+<td>6</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the search functionality with a valid product", "Search Functionality"</td>
+<td></td>
+<td>12</td>
+<td>runner.TestRunner@36b4091c</td></tr>
+</table><p>
+</body>
+</html>

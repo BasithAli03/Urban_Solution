@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="132.606" tests="10" skipped="0" failures="5" errors="0">
+<testcase classname="Verify Homepage Load" name="Verify that the homepage loads successfully." time="6.546">
+<system-out><![CDATA[
+Given I am on the homepage of Urban Ladder..................................passed
+Then The page title should contain "Urban Ladder"...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Signup" name="Verify user can sign up successfully" time="10.487">
+<system-out><![CDATA[
+Given I am on the homepage of Urban Ladder..................................passed
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Then Verify My Account is visible...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Signup" name="Verify user can LOG OUT successfully" time="11.711">
+<system-out><![CDATA[
+Given I am on the homepage of Urban Ladder..................................passed
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Then Verify My Account is visible...........................................passed
+And Click on logout button..................................................passed
+Then Verify Login button is visible.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify the search functionality with a valid product" time="12.901">
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Given I am on the homepage of Urban Ladder..................................passed
+When I search for "Sofa" from search bar....................................passed
+Then The search results should display items related to "Sofa"..............passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify that a product can be added to the wishlist." time="12.691">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.the_product_should_be_added_to_the_wishlist_successfully(SearchPageStep.java:30)
+	at ✽.The product should be added to the wishlist successfully.(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:18)
+]]>
+</failure>
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Given I search for "Table" from search bar..................................passed
+When Add the first product in the search results to the wishlist............passed
+Then The product should be added to the wishlist successfully...............failed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify that the product details page opens." time="11.881">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.the_product_details_page_should_open_with_the_correct_product_information(SearchPageStep.java:40)
+	at ✽.The product details page should open with the correct product information(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:24)
+]]>
+</failure>
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Given I am on the homepage of Urban Ladder..................................passed
+When I search for "Chairs" from search bar..................................passed
+When Click on view product button from the search results...................passed
+Then The product details page should open with the correct product information.failed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify that price filters work correctly." time="12.322">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.all_displayed_products_should_fall_within_the_selected_price_range(SearchPageStep.java:50)
+	at ✽.All displayed products should fall within the selected price range(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:30)
+]]>
+</failure>
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Given I am on the homepage of Urban Ladder..................................passed
+When I search for "Sofa" from search bar....................................passed
+When Apply a price filter...................................................passed
+Then All displayed products should fall within the selected price range.....failed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify product details in the wishlist." time="11.919">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at steps.SearchPageStep.verify_the_product_details_in_wishlist_page(SearchPageStep.java:55)
+	at ✽.Verify the product details in wishlist Page(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:35)
+]]>
+</failure>
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................passed
+And Complete the signup process with email and password "Testing1!".........passed
+Given I search for "Table" from search bar..................................passed
+When Add the first product in the search results to the wishlist............passed
+Then Verify the product details in wishlist Page............................failed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="Verify product can be added to compare section." time="34.476">
+<failure type="org.openqa.selenium.ElementNotInteractableException" message="element not interactable
+  (Session info: chrome=140.0.7339.128)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84f5a106dd4ec8604039070e7fdae7d0, clickElement {id=f.4A6ED30BE35393C76BD6635287F893A8.d.81097DFF3FA9B81E19DF95347F5D27C6.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\basith ali\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61661/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84f5a106dd4ec8604039070e7fdae7d0)] -&gt; css selector: a#header-icon-signup]
+Session ID: 84f5a106dd4ec8604039070e7fdae7d0">
+<![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.128)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [84f5a106dd4ec8604039070e7fdae7d0, clickElement {id=f.4A6ED30BE35393C76BD6635287F893A8.d.81097DFF3FA9B81E19DF95347F5D27C6.e.54}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\basith ali\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61661}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61661/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84f5a106dd4ec8604039070e7fdae7d0)] -> css selector: a#header-icon-signup]
+Session ID: 84f5a106dd4ec8604039070e7fdae7d0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at pages.SignupPage.clickOnSignupButton(SignupPage.java:31)
+	at steps.SignUpStep.i_click_on_the_button(SignUpStep.java:20)
+	at ✽.Click on the Sign Up button(file:///C:/Users/basith%20ali/OneDrive/Desktop/Wipro%20Training/Yaksha-VM-Java-Cucumber-UrbanLadder-Automation-L1-Selenium_Excel-Template-main/src/test/java/features/03_SearchPage.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+When Hover on the profile icon..............................................passed
+And Click on the Sign Up button.............................................failed
+And Complete the signup process with email and password "Testing1!".........skipped
+Given I search for "Dining" from search bar.................................skipped
+When Add the first product to compare section...............................skipped
+Then Verify the product is added to product compare section.................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Footer functionality" name="Verify the functionality of footer links." time="5.382">
+<system-out><![CDATA[
+Given I am on the homepage of Urban Ladder..................................passed
+When Click on the Contact Us link in the footer.............................passed
+Then The Contact Us page should open with relevant information..............passed
+]]></system-out>
+</testcase>
+</testsuite>
